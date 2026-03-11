@@ -110,7 +110,7 @@ For beginners, it is recommended to use the firmware that can be flashed without
 
 The firmware connects to the official [xiaozhi.me](https://xiaozhi.me) server by default. Personal users can register an account to use the Qwen real-time model for free.
 
-👉 [Beginner's Firmware Flashing Guide](https://ccnphfhqs21z.feishu.cn/wiki/Zpz4wXBtdimBrLk25WdcXzxcnNS)
+👉 [Beginner's Firmware Flashing Guide](docs/firmware-flashing-guide.md) ([original Chinese version](https://ccnphfhqs21z.feishu.cn/wiki/Zpz4wXBtdimBrLk25WdcXzxcnNS))
 
 ### Development Environment
 

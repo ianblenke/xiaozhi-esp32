@@ -110,7 +110,7 @@ Feishuドキュメントチュートリアルをご覧ください：
 
 ファームウェアはデフォルトで公式 [xiaozhi.me](https://xiaozhi.me) サーバーに接続します。個人ユーザーはアカウント登録でQwenリアルタイムモデルを無料で利用できます。
 
-👉 [初心者向けファームウェア書き込みガイド](https://ccnphfhqs21z.feishu.cn/wiki/Zpz4wXBtdimBrLk25WdcXzxcnNS)
+👉 [初心者向けファームウェア書き込みガイド](docs/firmware-flashing-guide.md) ([中国語原文](https://ccnphfhqs21z.feishu.cn/wiki/Zpz4wXBtdimBrLk25WdcXzxcnNS))
 
 ### 開発環境
 
