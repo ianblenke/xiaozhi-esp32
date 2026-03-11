@@ -1,60 +1,60 @@
-# 无名科技星智 1.54 METAL (wifi)
+# Wuming Technology Xingzhi 1.54 METAL (wifi)
 
-## 简介
-无名科技星智 1.54 METAL (wifi) 是星智 1.54 开模版的升级款，配备 1.54 寸 LCD 屏幕与 CST816 触摸芯片。它用触摸交互替代物理按键，并将外壳升级为铝合金材质，同步优化了交互体验与产品质感、手感。
+## Introduction
+Wuming Technology Xingzhi 1.54 METAL (wifi) is an upgraded version of the Xingzhi 1.54 molded edition, equipped with a 1.54-inch LCD screen and CST816 touch chip. It replaces physical buttons with touch interaction and upgrades the shell to aluminum alloy material, simultaneously optimizing the interaction experience and product texture and feel.
 
->### 按键操作
->- **开机**: 关机状态，长按电源键3秒后自动开机（旧版硬件长按电源键1s后自动开机）
->- **关机**: 开机状态，长按电源键5秒后自动关机（旧版硬件插入usb时不会自动关机）   
->- **唤醒/打断**: 正常通话环境下，单击中间触摸按键
->- **重新配网**: 开机后，1秒钟内单击中间触摸按键，会自动重启并进入配网界面
->- **增加音量**: 开机状态下，单击右侧触摸按键，音量增加。长按右侧触摸按键2s，音量递增。
->- **减小音量**: 开机状态下，单击左侧触摸按键，音量减小。长按左侧触摸按键2s，音量递减。
+>### Button Operations
+>- **Power On**: In powered-off state, long press the power button for 3 seconds to automatically power on (older hardware versions power on after 1s long press)
+>- **Power Off**: In powered-on state, long press the power button for 5 seconds to automatically power off (older hardware versions will not auto power off when USB is plugged in)
+>- **Wake Up/Interrupt**: In normal call environment, single click the center touch button
+>- **Re-configure Network**: After powering on, single click the center touch button within 1 second, the device will automatically restart and enter the network configuration screen
+>- **Increase Volume**: In powered-on state, single click the right touch button to increase volume. Long press the right touch button for 2s to continuously increase volume.
+>- **Decrease Volume**: In powered-on state, single click the left touch button to decrease volume. Long press the left touch button for 2s to continuously decrease volume.
 
->### 休眠操作
->- **浅睡眠**: 开机后，维持待命状态60s后，进入浅睡眠（屏幕亮度调整到1%）
->- **深睡眠**: 开机后，维持待命状态300s后，进入深睡眠（自动关机）
->- **唤醒**: 浅睡眠状态下，单击中间触摸按键，唤醒设备（屏幕亮度回调）
+>### Sleep Operations
+>- **Light Sleep**: After powering on, after maintaining standby state for 60s, enters light sleep (screen brightness adjusted to 1%)
+>- **Deep Sleep**: After powering on, after maintaining standby state for 300s, enters deep sleep (automatic power off)
+>- **Wake Up**: In light sleep state, single click the center touch button to wake up the device (screen brightness restored)
 
-# 编译配置命令
+# Build Configuration Commands
 
-**克隆工程**
+**Clone the project**
 
 ```bash
 git clone https://github.com/78/xiaozhi-esp32.git
 ```
 
-**进入工程**
+**Enter the project directory**
 
 ```bash
 cd xiaozhi-esp32
 ```
 
-**配置编译目标为 ESP32S3**
+**Set the build target to ESP32S3**
 
 ```bash
 idf.py set-target esp32s3
 ```
 
-**打开 menuconfig**
+**Open menuconfig**
 
 ```bash
 idf.py menuconfig
 ```
 
-**选择板子**
+**Select the board**
 
 ```bash
-- `Xiaozhi Assistant` → `Board Type` → 选择 `无名科技星智1.54 METAL(wifi)`
+- `Xiaozhi Assistant` → `Board Type` → Select `Wuming Technology Xingzhi 1.54 METAL(wifi)`
 ```
 
-**编译**
+**Build**
 
 ```ba
 idf.py build
 ```
 
-**下载并打开串口终端**
+**Flash and open serial monitor**
 
 ```bash
 idf.py build flash monitor

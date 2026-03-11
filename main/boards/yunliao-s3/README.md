@@ -1,97 +1,97 @@
-# 小智云聊 S3
+# Xiaozhi Yunliao S3
 
-## 简介
+## Introduction
 
-小智云聊 S3 是小智 AI 的魔改项目，是首个 2.8 寸护眼大屏+大字体+2000mah 大电池的量产成品，做了大量创新和优化。
+Xiaozhi Yunliao S3 is a modified version of the Xiaozhi AI project, and is the first mass-produced finished product with a 2.8-inch eye-protection large screen + large font + 2000mAh large battery, with extensive innovations and optimizations.
 
-## 官方版
+## Official Version
 
-官方版代码在小智 AI 主项目中维护，跟随主项目的一起版本更新，便于用户自行扩展和第三方固件扩展。支持语音唤醒、语音打断、OTA、4G 自由切换等功能。
+The official version code is maintained in the Xiaozhi AI main project, following the main project's version updates, making it easy for users to extend and for third-party firmware extensions. Supports voice wake-up, voice interruption, OTA, 4G free switching and other features.
 
-> ### 按键操作
+> ### Button Operations
 >
-> - **开机**: 关机状态，长按 1 秒后释放按键，自动开机。
-> - **关机**: 开机状态，长按 1 秒后释放按键，标题栏会显示'请稍候'，再等 2 秒自动关机。
-> - **唤醒/打断**: 正常通话环境下，单击按键。
-> - **切换 4G/Wifi**: 启动过程或者配网界面，1 秒钟内双击按键（需安装 4G 模块）。
-> - **切换语音(AEC)打断模式**: 正常启动后，在空闲无对话模式下，1 秒钟内双击按键，循环切换语音打断模式。
-> - **重新配网**: 开机状态，1 秒钟内三击按键，会自动重启并进入配网界面。
+> - **Power On**: In powered-off state, long press for 1 second then release the button to automatically power on.
+> - **Power Off**: In powered-on state, long press for 1 second then release the button, the title bar will display 'Please wait', then automatically powers off after 2 more seconds.
+> - **Wake Up/Interrupt**: In normal call environment, single click the button.
+> - **Switch 4G/Wi-Fi**: During startup or on the network configuration screen, double click the button within 1 second (requires 4G module installed).
+> - **Switch Voice (AEC) Interrupt Mode**: After normal startup, in idle no-conversation mode, double click the button within 1 second to cycle through voice interrupt modes.
+> - **Re-configure Network**: In powered-on state, triple click the button within 1 second, the device will automatically restart and enter the network configuration screen.
 
-> ### 语音指令
+> ### Voice Commands
 >
-> - **打开/关闭语音(AEC)打断模式**: 在播放音乐时，需要关闭语音打断模式，否则可能会打断音乐播放。
-> - **切换 IPS 屏幕显示模式**: 新版小智云聊 S3 升级了 IPS 屏幕，需要切换屏幕显示模式后才能正常显示，可以来回切换。
+> - **Enable/Disable Voice (AEC) Interrupt Mode**: When playing music, you need to disable voice interrupt mode, otherwise it may interrupt music playback.
+> - **Switch IPS Screen Display Mode**: The new version of Xiaozhi Yunliao S3 has been upgraded with an IPS screen. You need to switch the screen display mode for normal display. You can switch back and forth.
 
-## 魔改版
+## Modified Version
 
-魔改版由于底层改动太大，代码单独维护，定期合并主项目代码。
+The modified version has too many underlying changes, so the code is maintained separately and periodically merged with the main project code.
 
-> ### 为什么是魔改
+> ### Why It's Modified
 >
-> - 首个实现微信二维码配网。
-> - 首个支持单手机配网。
-> - 首个支持扫二维码访问控制台。
-> - 首发支持繁体、日文、英文版界面。
-> - 首个全语音操控模式。
-> - 独家提供一键刷机脚本等多种刷机方式。
+> - First to implement WeChat QR code network configuration.
+> - First to support single-phone network configuration.
+> - First to support scanning QR code to access the console.
+> - First to support Traditional Chinese, Japanese, and English interface.
+> - First to have full voice control mode.
+> - Exclusively provides one-click flashing scripts and multiple flashing methods.
 
-## 版本区别
+## Version Differences
 
-> | 特性           | 官方版 | 魔改版 |
+> | Feature | Official Version | Modified Version |
 > | -------------- | ------ | ------ |
-> | 语音打断       | ✓      | ✓      |
-> | 4G 功能        | ✓      | ✓      |
-> | 自动更新固件   | ✓      | X      |
-> | 第三方固件支持 | ✓      | X      |
-> | 天气待机界面   | X      | ✓      |
-> | 闹钟提醒       | X      | ✓      |
-> | 网络音乐播放   | X      | ✓      |
-> | 微信扫码配网   | X      | ✓      |
-> | 单手机配网     | X      | ✓      |
-> | 扫码访问控制台 | X      | ✓      |
-> | 繁日英文界面   | X      | ✓      |
-> | 多语言支持     | 需自行编译      | ✓      |
-> | 外接蓝牙音箱/耳机   | ✓      | ✓      |
+> | Voice Interruption | ✓ | ✓ |
+> | 4G Function | ✓ | ✓ |
+> | Auto Firmware Update | ✓ | X |
+> | Third-party Firmware Support | ✓ | X |
+> | Weather Standby Screen | X | ✓ |
+> | Alarm Reminder | X | ✓ |
+> | Online Music Playback | X | ✓ |
+> | WeChat QR Network Config | X | ✓ |
+> | Single-phone Network Config | X | ✓ |
+> | QR Code Console Access | X | ✓ |
+> | Traditional/Japanese/English Interface | X | ✓ |
+> | Multi-language Support | Requires self-compilation | ✓ |
+> | External Bluetooth Speaker/Headset | ✓ | ✓ |
 
-# 编译配置命令
+# Build Configuration Commands
 
-**克隆工程**
+**Clone the project**
 
 ```bash
 git clone https://github.com/78/xiaozhi-esp32.git
 ```
 
-**进入工程**
+**Enter the project directory**
 
 ```bash
 cd xiaozhi-esp32
 ```
 
-**配置编译目标为 ESP32S3**
+**Set the build target to ESP32S3**
 
 ```bash
 idf.py set-target esp32s3
 ```
 
-**打开 menuconfig**
+**Open menuconfig**
 
 ```bash
 idf.py menuconfig
 ```
 
-**选择板子**
+**Select the board**
 
 ```bash
-- `Xiaozhi Assistant` → `Board Type` → 选择 `小智云聊-S3` → 选择 `Enable Device-Side AEC`
+- `Xiaozhi Assistant` → `Board Type` → Select `Xiaozhi Yunliao-S3` → Select `Enable Device-Side AEC`
 ```
 
-**编译**
+**Build**
 
 ```ba
 idf.py build
 ```
 
-**下载并打开串口终端**
+**Flash and open serial monitor**
 
 ```bash
 idf.py build flash monitor

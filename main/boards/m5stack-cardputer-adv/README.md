@@ -1,25 +1,25 @@
 # M5Stack Cardputer Adv
 
-M5Stack Cardputer Adv 是一款基于 ESP32-S3FN8 (Stamp-S3A) 的卡片式电脑。
+M5Stack Cardputer Adv is a card-sized computer based on ESP32-S3FN8 (Stamp-S3A).
 
-## 硬件规格
+## Hardware Specifications
 
-| 组件 | 规格 |
+| Component | Specification |
 |------|------|
 | MCU | ESP32-S3FN8 @ 240MHz |
 | Flash | 8MB |
-| 显示屏 | ST7789V2 1.14" 240x135 |
-| 音频编解码 | ES8311 |
-| 功放 | NS4150B |
-| 麦克风 | MEMS |
-| 键盘 | 56键 (TCA8418) |
+| Display | ST7789V2 1.14" 240x135 |
+| Audio Codec | ES8311 |
+| Amplifier | NS4150B |
+| Microphone | MEMS |
+| Keyboard | 56-key (TCA8418) |
 | IMU | BMI270 |
-| 电池 | 1750mAh |
+| Battery | 1750mAh |
 
-## 引脚定义
+## Pin Definitions
 
-### 显示屏 (ST7789V2)
-| 功能 | GPIO |
+### Display (ST7789V2)
+| Function | GPIO |
 |------|------|
 | MOSI | GPIO35 |
 | SCLK | GPIO36 |
@@ -28,8 +28,8 @@ M5Stack Cardputer Adv 是一款基于 ESP32-S3FN8 (Stamp-S3A) 的卡片式电脑
 | RST | GPIO33 |
 | BL | GPIO38 |
 
-### 音频 (ES8311)
-| 功能 | GPIO |
+### Audio (ES8311)
+| Function | GPIO |
 |------|------|
 | I2C SDA | GPIO8 |
 | I2C SCL | GPIO9 |
@@ -38,11 +38,11 @@ M5Stack Cardputer Adv 是一款基于 ESP32-S3FN8 (Stamp-S3A) 的卡片式电脑
 | I2S DOUT | GPIO46 |
 | I2S DIN | GPIO42 |
 
-## 使用方法
+## Usage
 
-1. 按下 BOOT 按钮进入配网模式
-2. 连接 WiFi 后即可使用语音助手功能
+1. Press the BOOT button to enter network configuration mode
+2. After connecting to WiFi, you can use the voice assistant functionality
 
-## 参考链接
+## Reference Links
 
-- [M5Stack Cardputer Adv 官方文档](https://docs.m5stack.com/en/core/Cardputer-Adv)
+- [M5Stack Cardputer Adv Official Documentation](https://docs.m5stack.com/en/core/Cardputer-Adv)

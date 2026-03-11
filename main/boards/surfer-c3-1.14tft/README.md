@@ -1,5 +1,4 @@
-## Surfer-ESP32-C3 开发板
+## Surfer-ESP32-C3 Development Board
 
-1、参考立创·实战派C3-ESP32C3开发板，修改了TFT屏幕背光引脚，增加ADC电池电量检测功能;
-2、该开发板 flash 大小为 16MB，编译时注意选择默认的分区表。
-
+1. Based on the LCSC Practical ESP32-C3 Development Board, the TFT screen backlight pin has been modified and ADC battery level detection functionality has been added.
+2. This development board has 16MB flash. When compiling, make sure to select the default partition table.

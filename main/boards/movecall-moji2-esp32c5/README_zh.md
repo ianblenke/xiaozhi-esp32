@@ -1,57 +1,57 @@
-# 编译配置指南
+# Build Configuration Guide
 
-本文档介绍了如何为 **Movecall Moji2.0 (小智AI衍生版)** 配置和编译固件。
+This document describes how to configure and build firmware for **Movecall Moji2.0 (Xiaozhi AI Derivative Edition)**.
 
-## 🛠 环境要求
-*   **ESP-IDF 版本**: v5.5
-*   **芯片型号**: ESP32-C5
+## Prerequisites
+*   **ESP-IDF Version**: v5.5
+*   **Chip Model**: ESP32-C5
 
-## 🔗 硬件开源信息
-本项目基于以下开源硬件设计：
-*   **立创开源硬件平台**: [https://oshwhub.com/movecall/moji2](https://oshwhub.com/movecall/moji2)
+## Hardware Open Source Information
+This project is based on the following open-source hardware design:
+*   **LCEDA Open Source Hardware Platform**: [https://oshwhub.com/movecall/moji2](https://oshwhub.com/movecall/moji2)
 
 ---
 
-## 🚀 编译步骤
+## Build Steps
 
-### 1. 设置编译目标
-首先，将项目目标芯片设置为 ESP32-C5：
+### 1. Set the Build Target
+First, set the project target chip to ESP32-C5:
 ```bash
 idf.py set-target esp32c5
 ```
 
-### 2. 配置开发板型号
-运行以下命令打开配置菜单进行板型选择：
+### 2. Configure the Board Type
+Run the following command to open the configuration menu for board selection:
 ```bash
 idf.py menuconfig
 ```
 
-**请在菜单中按照以下路径进行操作：**
-> **Xiaozhi Assistant** -> **Board Type** -> **Movecall Moji2.0 小智AI衍生版**
+**Navigate the menu following this path:**
+> **Xiaozhi Assistant** -> **Board Type** -> **Movecall Moji2.0 Xiaozhi AI Derivative Edition**
 
-*操作提示：配置完成后，按 **S** 保存并按回车确认，按 **Q** 退出。*
+*Tip: After configuration, press **S** to save and Enter to confirm, press **Q** to exit.*
 
-### 3. 执行编译
-运行以下命令开始构建项目：
+### 3. Build
+Run the following command to start building the project:
 ```bash
 idf.py build
 ```
 
 ---
 
-## 🔧 常用维护命令
+## Useful Maintenance Commands
 
-**清理编译缓存 (遇到报错建议执行)：**
+**Clean build cache (recommended if you encounter errors):**
 ```bash
 idf.py fullclean
 ```
 
-**烧录固件：**
+**Flash firmware:**
 ```bash
 idf.py flash
 ```
 
-**查看串口日志：**
+**View serial logs:**
 ```bash
 idf.py monitor
 ```

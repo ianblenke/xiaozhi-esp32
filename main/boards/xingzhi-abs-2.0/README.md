@@ -1,77 +1,77 @@
-# 无名科技星智 ABS 2.0
+# Wuming Technology Xingzhi ABS 2.0
 
-## 简介
-无名科技星智 ABS 2.0 是一款高性价比的 AI 语音交互开发板。它搭载 1.54 寸 LCD 屏幕，配备独立的物理按键，并采用 **ML307R 4G 通信模组**，让你在没有 Wi-Fi 的环境下也能随时随地与大模型对话。
+## Introduction
+Wuming Technology Xingzhi ABS 2.0 is a cost-effective AI voice interaction development board. It features a 1.54-inch LCD screen, independent physical buttons, and uses the **ML307R 4G communication module**, allowing you to have conversations with large language models anytime, anywhere, even without Wi-Fi.
 
-## 核心特性
-- 双网络通信：支持 Wi-Fi 与 ML307R Cat.1 4G 双模切换，适配多场景使用
-- 显示系统：1.54 寸 240×240 LCD 屏幕，自定义 UI 布局优化，适配 1.54 寸方形屏显示效果
-- 物理按键交互：独立 Boot 功能键、音量加减键，支持单击、双击、长按、五击多阶操作
-- 扩展能力：内置 Micro SD 卡插槽，支持本地存储扩展；可预留震动马达，实现按键操作触觉反馈
-- 完善的电源管理：支持电池电量 ADC 检测、充电状态实时监测、自动休眠与深度睡眠节能控制
-- 生态兼容：完全适配小智 ESP32 项目固件，支持 Qwen/DeepSeek 等大模型，兼容 MCP 协议设备控制
-- 由于硬件差异，UI显示上对底部表情和文本的显示位置稍有改动
+## Core Features
+- Dual network communication: Supports Wi-Fi and ML307R Cat.1 4G dual-mode switching, adaptable to multiple scenarios
+- Display system: 1.54-inch 240x240 LCD screen, with custom UI layout optimization for the 1.54-inch square screen display
+- Physical button interaction: Independent Boot function key, volume up/down keys, supporting single click, double click, long press, and five-click multi-level operations
+- Expansion capability: Built-in Micro SD card slot for local storage expansion; vibration motor can be reserved for tactile feedback on button operations
+- Complete power management: Supports battery level ADC detection, real-time charging status monitoring, automatic sleep and deep sleep power-saving control
+- Ecosystem compatible: Fully compatible with Xiaozhi ESP32 project firmware, supports large models such as Qwen/DeepSeek, compatible with MCP protocol device control
+- Due to hardware differences, the display positions of the bottom emoji and text on the UI have been slightly adjusted
 
-## 与铝合金版本（XINGZHI_METAL_1_54_WIFI）核心差异
-| 功能特性 | xingzhi-abs-2.0 | 铝合金版本 |
+## Core Differences from the Aluminum Alloy Version (XINGZHI_METAL_1_54_WIFI)
+| Feature | xingzhi-abs-2.0 | Aluminum Alloy Version |
 |----------|------------------|------------|
-| 交互方式 | 独立物理按键（Boot/音量+/音量-） | CST816 触摸芯片+触摸交互 |
-| 外壳材质 | ABS 工程塑料 | 铝合金材质 |
+| Interaction Method | Independent physical buttons (Boot/Volume+/Volume-) | CST816 touch chip + touch interaction |
+| Shell Material | ABS engineering plastic | Aluminum alloy |
 
->### 按键操作
->- **开机**: 关机状态，长按电源键3秒后自动开机
->- **关机**: 开机状态，长按电源键5秒后自动关机
->- **唤醒/打断**: 正常通话/待机状态下，单击Boot功能键，可唤醒设备或打断正在进行的语音对话
->- **重新配网**: 开机后1秒钟内，单击Boot功能键，设备会自动重启并进入配网界面
->- **切换网络模式**: 开机状态下，双击Boot功能键，可切换Wi-Fi与4G网络模式
->- **SD卡状态检测**: 开机状态下，五击Boot功能键，可检测并在屏幕显示SD卡挂载状态
->- **增加音量**: 开机状态下，单击音量+按键，音量增加10%；长按音量+按键2s，音量直接递增至100%最大音量
->- **减小音量**: 开机状态下，单击音量-按键，音量减小10%；长按音量-按键2s，音量直接递减至0%静音
+>### Button Operations
+>- **Power On**: In powered-off state, long press the power button for 3 seconds to automatically power on
+>- **Power Off**: In powered-on state, long press the power button for 5 seconds to automatically power off
+>- **Wake Up/Interrupt**: In normal call/standby state, single click the Boot function key to wake up the device or interrupt an ongoing voice conversation
+>- **Re-configure Network**: Within 1 second after powering on, single click the Boot function key, the device will automatically restart and enter the network configuration screen
+>- **Switch Network Mode**: In powered-on state, double click the Boot function key to switch between Wi-Fi and 4G network modes
+>- **SD Card Status Detection**: In powered-on state, click the Boot function key five times to detect and display SD card mount status on screen
+>- **Increase Volume**: In powered-on state, single click the Volume+ button to increase volume by 10%; long press the Volume+ button for 2s to directly increase volume to 100% maximum
+>- **Decrease Volume**: In powered-on state, single click the Volume- button to decrease volume by 10%; long press the Volume- button for 2s to directly decrease volume to 0% mute
 
->### 休眠操作
->- **浅睡眠**: 开机后，维持待命状态60s后，进入浅睡眠（屏幕亮度调整到1%）
->- **深睡眠**: 开机后，维持待命状态300s后，自动关机
->- **唤醒**: 浅睡眠状态下，单击任意按键，唤醒设备（屏幕亮度回调）
+>### Sleep Operations
+>- **Light Sleep**: After powering on, after maintaining standby state for 60s, enters light sleep (screen brightness adjusted to 1%)
+>- **Deep Sleep**: After powering on, after maintaining standby state for 300s, automatically powers off
+>- **Wake Up**: In light sleep state, single click any button to wake up the device (screen brightness restored)
 
-# 编译配置命令
+# Build Configuration Commands
 
-**克隆工程**
+**Clone the project**
 
 ```bash
 git clone https://github.com/78/xiaozhi-esp32.git
 ```
 
-**进入工程**
+**Enter the project directory**
 
 ```bash
 cd xiaozhi-esp32
 ```
 
-**配置编译目标为 ESP32S3**
+**Set the build target to ESP32S3**
 
 ```bash
 idf.py set-target esp32s3
 ```
 
-**打开 menuconfig**
+**Open menuconfig**
 
 ```bash
 idf.py menuconfig
 ```
 
-**选择板子**
+**Select the board**
 
 ```bash
-- `Xiaozhi Assistant` → `Board Type` → 选择 `无名科技星智ABS 2.0`
+- `Xiaozhi Assistant` → `Board Type` → Select `Wuming Technology Xingzhi ABS 2.0`
 ```
 
-**编译**
+**Build**
 
 ```ba
 idf.py build
 ```
 
-**下载并打开串口终端**
+**Flash and open serial monitor**
 
 ```bash
 idf.py build flash monitor

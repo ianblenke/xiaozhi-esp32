@@ -1,45 +1,45 @@
 # AtomEchoS3R
-## 简介
+## Introduction
 
-AtomEchoS3R 是 M5Stack 推出的基于 ESP32-S3-PICO-1-N8R8 的物联网可编程控制器，采用了 ES8311 单声道音频解码器、MEMS 麦克风和 NS4150B 功率放大器的集成方案。
+AtomEchoS3R is an IoT programmable controller based on ESP32-S3-PICO-1-N8R8 launched by M5Stack, featuring an integrated solution with ES8311 mono audio decoder, MEMS microphone, and NS4150B power amplifier.
 
-开发版**不带屏幕、不带额外按键**，需要使用语音唤醒。必要时，需要使用 `idf.py monitor` 查看 log 以确定运行状态。
+The development board **has no screen and no additional buttons**, so voice wake-up is required. When necessary, use `idf.py monitor` to view logs to determine the running status.
 
-## 配置、编译命令
+## Configuration and Build Commands
 
-**配置编译目标为 ESP32S3**
+**Set the build target to ESP32S3**
 
 ```bash
 idf.py set-target esp32s3
 ```
 
-**打开 menuconfig 并配置**
+**Open menuconfig and configure**
 
 ```bash
 idf.py menuconfig
 ```
 
-分别配置如下选项：
+Configure the following options respectively:
 
-- `Xiaozhi Assistant` → `Board Type` → 选择 `AtomEchoS3R`
-- `Partition Table` → `Custom partition CSV file` → 删除原有内容，输入 `partitions/v2/8m.csv`
-- `Serial flasher config` → `Flash size` → 选择 `8 MB`
-- `Component config` → `ESP PSRAM` → `Support for external, SPI-connected RAM` → `SPI RAM config` → 选择 `Octal Mode PSRAM`
+- `Xiaozhi Assistant` → `Board Type` → Select `AtomEchoS3R`
+- `Partition Table` → `Custom partition CSV file` → Delete the existing content and enter `partitions/v2/8m.csv`
+- `Serial flasher config` → `Flash size` → Select `8 MB`
+- `Component config` → `ESP PSRAM` → `Support for external, SPI-connected RAM` → `SPI RAM config` → Select `Octal Mode PSRAM`
 
-按 `S` 保存，按 `Q` 退出。
+Press `S` to save, press `Q` to exit.
 
-**编译**
+**Build**
 
 ```bash
 idf.py build
 ```
 
-**烧录**
+**Flash**
 
-将 AtomEchoS3R 连接到电脑，按住侧面 RESET 按键，直到 RESET 按键下方绿灯闪烁。
+Connect AtomEchoS3R to your computer, press and hold the side RESET button until the green LED below the RESET button starts flashing.
 
 ```bash
 idf.py flash
 ```
 
-烧录完毕后，按一下 RESET 按钮重启设备。
+After flashing is complete, press the RESET button once to restart the device.

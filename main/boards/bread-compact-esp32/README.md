@@ -1,24 +1,24 @@
-# 编译配置命令
+# Build Configuration Commands
 
-**配置编译目标为 ESP32：**
+**Set the build target to ESP32:**
 
 ```bash
 idf.py set-target esp32
 ```
 
-**打开 menuconfig：**
+**Open menuconfig:**
 
 ```bash
 idf.py menuconfig
 ```
 
-**选择板子：**
+**Select the board:**
 
 ```
-Xiaozhi Assistant -> Board Type -> 面包板 ESP32 DevKit
+Xiaozhi Assistant -> Board Type -> Breadboard ESP32 DevKit
 ```
 
-**编译：**
+**Build:**
 
 ```bash
 idf.py build

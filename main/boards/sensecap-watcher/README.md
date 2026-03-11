@@ -1,30 +1,30 @@
-# 编译命令
+# Build Commands
 
-## 一键编译
+## One-Click Build
 
 ```bash
 python scripts/release.py sensecap-watcher
 ```
 
-## 手动配置编译
+## Manual Configuration and Build
 
 ```bash
 idf.py set-target esp32s3
 ```
 
-**配置**
+**Configuration**
 
 ```bash
 idf.py menuconfig
 ```
 
-选择板子
+Select the board
 
 ```
 Xiaozhi Assistant -> Board Type -> SenseCAP Watcher
 ```
 
-watcher 中一些额外的配置项如下，需要在menuconfig 中选择.
+Some additional configuration options for the Watcher are listed below and need to be selected in menuconfig.
 
 ```
 CONFIG_BOARD_TYPE_SEEED_STUDIO_SENSECAP_WATCHER=y
@@ -35,15 +35,15 @@ CONFIG_ESPTOOLPY_FLASH_MODE_AUTO_DETECT=n
 CONFIG_IDF_EXPERIMENTAL_FEATURES=y
 ```
 
-## 编译烧入
+## Build and Flash
 
 ```bash
 idf.py -DBOARD_NAME=sensecap-watcher build flash
 ```
 
-注意: 如果当前设备出货之前是SenseCAP 固件(非小智版本),请特别小心处理闪存固件分区地址，以避免错误擦除 SenseCAP Watcher 的自身设备信息（EUI 等），否则设备即使恢复成SenseCAP固件也无法正确连接到 SenseCraft 服务器！所以在刷写固件之前，请务必记录设备的相关必要信息，以确保有恢复的方法！
+Note: If the device was shipped with SenseCAP firmware (non-Xiaozhi version), please be especially careful with the flash firmware partition addresses to avoid accidentally erasing the SenseCAP Watcher's own device information (EUI, etc.). Otherwise, even if the device is restored to SenseCAP firmware, it will not be able to connect to the SenseCraft server correctly! So before flashing firmware, please make sure to record the device's relevant essential information to ensure there is a way to recover!
 
-您可以使用以下命令备份生产信息
+You can use the following command to back up production information
 
 ```bash
 # firstly backup the factory information partition which contains the credentials for connecting the SenseCraft server

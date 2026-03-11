@@ -1,25 +1,25 @@
-# 使用说明 
+# Usage Instructions
 
 * [M5Stack Tab5 docs](https://docs.m5stack.com/zh_CN/core/Tab5)
 
-## 快速体验
+## Quick Start
 
-到 [M5Burner](https://docs.m5stack.com/zh_CN/uiflow/m5burner/intro) 选择 Tab5 搜索小智下载固件
+Go to [M5Burner](https://docs.m5stack.com/zh_CN/uiflow/m5burner/intro), select Tab5, search for Xiaozhi and download the firmware
 
-## 基础使用
+## Basic Usage
 
 * idf version: v6.0-dev
 
-1. 调整 idf_component.yml
+1. Adjust idf_component.yml
 
-将
+Change
 ```yaml
   espressif/esp_video:
     version: ==1.3.1   # for compatibility. update version may need to modify this project code.
     rules:
     - if: target not in [esp32]
 ```
-修改为
+To
 ```yaml
   espressif/esp_video:
     version: '==0.7.0'
@@ -30,37 +30,37 @@
 
 * idf version: v5.5.3
 
-针对 ESP32-P4 Rev <3.0 用户:
-确保你的 sdkconfig.defaults 包含:
+For ESP32-P4 Rev <3.0 users:
+Make sure your sdkconfig.defaults includes:
 
 CONFIG_ESP32P4_SELECTS_REV_LESS_V3=y
 
-否则烧写的时候会出现：'bootloader/bootloader.bin' requires chip revision in range [v3.0 - v3.99] (this chip is revision v1.x)
+Otherwise, you will encounter the following error during flashing: 'bootloader/bootloader.bin' requires chip revision in range [v3.0 - v3.99] (this chip is revision v1.x)
 
-2. 使用 release.py 编译
+2. Build using release.py
 
 ```shell
 python ./scripts/release.py m5stack-tab5
 ```
 
-如需手动编译，请参考 `m5stack-tab5/config.json` 修改 menuconfig 对应选项。
+For manual compilation, please refer to `m5stack-tab5/config.json` to modify the corresponding menuconfig options.
 
-3. 编译烧录程序
+3. Build, flash, and monitor
 
 ```shell
 idf.py flash monitor
 ```
 
 > [!NOTE]
-> 进入下载模式：长按复位按键（约 2 秒），直至内部绿色 LED 指示灯开始快速闪烁，松开按键。
+> To enter download mode: Long press the reset button (about 2 seconds) until the internal green LED indicator starts flashing rapidly, then release the button.
 
 
 ## log
 
-@2025/05/17 测试问题
+@2025/05/17 Test issues
 
-1. listening... 需要等几秒才能获取语音输入???
-2. 亮度调节不对
-3. 音量调节不对
- 
+1. listening... needs to wait a few seconds before it can receive voice input???
+2. Brightness adjustment is incorrect
+3. Volume adjustment is incorrect
+
 ## TODO
